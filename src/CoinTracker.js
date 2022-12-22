@@ -27,7 +27,7 @@ function CoinTracker() {
           <option key={idx} value={coin.quotes.USD.price}> {coin.name} </option>
         ))}
       </select><br/>
-      <strong>USD -> COIN</strong> <input onChange={onChange} value={usd} type="number"/> -> 
+      <strong>USD -{">"} COIN</strong> <input onChange={onChange} value={usd} type="number"/> -{">"} 
       <span style={{backgroundColor: "#e7e7e7", color: "black"}}> coin [{(usd / bitCoin).toFixed(4)}] </span>
       {loading ? <strong>Loading...</strong> : null}
       <hr/>
